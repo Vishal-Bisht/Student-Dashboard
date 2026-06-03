@@ -35,7 +35,7 @@ export function HeroTile() {
           <Star size={10} className="text-accent-cyan/50" />
         </div>
         <h1 className="font-display text-3xl font-bold text-white tracking-tight leading-none">
-          Alex Rivera
+          Vishal Bist
         </h1>
         <p className="font-body text-sm text-white/40 mt-1.5">
           Continue where you left off — you&apos;re on a roll.
@@ -58,7 +58,12 @@ export function HeroTile() {
               key={i}
               initial={{ scaleY: 0 }}
               animate={{ scaleY: 1 }}
-              transition={{ delay: 0.3 + i * 0.05, type: "spring", stiffness: 400, damping: 20 }}
+              transition={{
+                delay: 0.3 + i * 0.05,
+                type: "spring",
+                stiffness: 400,
+                damping: 20,
+              }}
               className={`w-1.5 rounded-full origin-bottom ${
                 i < 6 ? "h-5 bg-amber-400" : "h-3 bg-amber-400/30"
               }`}

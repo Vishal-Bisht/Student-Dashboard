@@ -4,7 +4,7 @@ A premium, fully-animated student dashboard prototype built with **Next.js 15 (A
 
 ## 🚀 Live Demo
 
-> **Deploy to Vercel**: Push to GitHub → Vercel auto-deploys. Add Supabase env vars in Vercel project settings. Done in <2 minutes.
+> **Live App**: [student-dashboard-ten-iota.vercel.app](https://student-dashboard-ten-iota.vercel.app/)
 >
 > **Repository**: [github.com/Vishal-Bisht/Student-Dashboard](https://github.com/Vishal-Bisht/Student-Dashboard)
 
