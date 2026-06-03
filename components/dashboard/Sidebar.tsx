@@ -35,7 +35,7 @@ export function Sidebar({ className }: SidebarProps) {
       initial={false}
       animate={{ width: collapsed ? 68 : 220 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className={`relative flex flex-col h-full bg-bg-surface border-r border-bg-border overflow-hidden ${className ?? ""}`}
+      className={`relative flex flex-col h-full bg-bg-surface border-r border-bg-border overflow-visible ${className ?? ""}`}
       aria-label="Primary navigation"
     >
       {/* Logo */}
@@ -60,13 +60,16 @@ export function Sidebar({ className }: SidebarProps) {
         </div>
 
         {/* Collapse toggle */}
-        <button
+        <motion.button
           onClick={() => setCollapsed(!collapsed)}
-          className="flex-shrink-0 w-6 h-6 rounded-full bg-bg-elevated border border-bg-border flex items-center justify-center hover:border-accent-cyan/40 hover:text-accent-cyan transition-colors text-white/40 z-10"
+          animate={{
+            right: collapsed ? -36 : 12,
+          }}
+          className={`flex-shrink-0 w-6 h-6 rounded-full bg-bg-elevated border border-bg-border flex items-center justify-center hover:border-accent-cyan/40 hover:text-accent-cyan transition-colors text-white/40 z-10 absolute`}
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
           {collapsed ? <ChevronRight size={12} /> : <ChevronLeft size={12} />}
-        </button>
+        </motion.button>
       </div>
 
       {/* Nav items */}
